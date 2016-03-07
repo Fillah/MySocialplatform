@@ -12,3 +12,14 @@ Meteor.publish('singlePost', function(id){
     check(id, String);
    return Posts.find({_id: id}); 
 });
+
+ServiceConfiguration.configurations.upsert(
+  { service: "Facebook" },
+  {
+    $set: {
+      clientId: "123",
+      loginStyle: "popup",
+      secret: "123"
+    }
+  }
+);

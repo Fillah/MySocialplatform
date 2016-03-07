@@ -11,17 +11,6 @@ Template.Frontpage.helpers({
    } 
 });
 
-ServiceConfiguration.configurations.upsert(
-  { service: "weibo" },
-  {
-    $set: {
-      clientId: "123",
-      loginStyle: "popup",
-      secret: "123"
-    }
-  }
-);
-
 Meteor.loginWithFacebook({
   requestPermissions: ['public_profile']
 }, function (err) {
