@@ -1,0 +1,25 @@
+<template name="Header">
+    <!-- navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a id="nav-toggle" href="#">
+                    <span></span>
+                </a>
+                <a class="navbar-brand" href="#">
+                    
+                </a>
+            </div>
+            <div class="navigation">
+                <nav class="main-navigation clearfix">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/frontpage">Front page</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="#">{{> loginButtons}}</a></li>
+                        <li><a href="/settings">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+     </div>  
+</template>

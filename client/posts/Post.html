@@ -1,0 +1,29 @@
+<template name="Post">
+    <div class="post">
+        <div class="main">
+            <div class="pic"></div>
+            <div class="details">
+                <div class="name">{{author}}</div>
+                <div class="time">{{createdAt}}, {{location}}</div>
+            </div>
+            <div class="clear"></div>
+            {{#if editMode}}
+                {{> quickForm collection="Posts" id=updatePostId type="update" doc=this autosave=true}}
+            {{else}}
+                <div class="content">{{desc}}</div>
+            	<a href="/post/{{_id}}">View Details</a>
+            {{/if}}
+            <div class="likes">{{likes}} likes - {{comments}} comments</div>
+            <i class="fa fa-pencil"></i>
+            <i class="fa fa-trash"></i>
+        </div>
+        <div class="buttons">
+            <div class="border-right"><div class="like">Like</div></div>
+            <div class="border-right"><div class="comment">Comment</div></div>
+            <div><div class="share">Share</div></div>
+            <div><div class="clear"></div></div>
+        </div>
+    </div>
+    <br />
+    <br />
+</template>
