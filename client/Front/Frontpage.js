@@ -10,11 +10,3 @@ Template.Frontpage.helpers({
        return Posts.find();
    } 
 });
-
-Meteor.loginWithFacebook({
-  requestPermissions: ['public_profile']
-}, function (err) {
-  debugger
-  if (err)
-    console.log("Error: " + (err.reason || 'Unknown error'));
-});

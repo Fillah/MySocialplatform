@@ -44,3 +44,4 @@ accounts-ui
 audit-argument-checks
 service-configuration
 accounts-github
+momentjs:moment
