@@ -9,7 +9,7 @@ Posts.allow({
         return true;
     },
     remove: function(userId, doc) {
-        return true;
+        return false;
     }
 });
 
@@ -40,12 +40,12 @@ CommentSchema = new SimpleSchema({
    }
 });
 
-PostSchema = new SimpleSchema ({
+PostSchema = new SimpleSchema({
     author: {
         type: String,
         label: "Author",
         autoValue: function() {
-            return (Meteor.user.profile && Meteor.user.profile.fullname) ? Meteor.user.profile.fullname : "default value";
+            return Meteor.user().profile.name
         },
         autoform: {
             type: "hidden"
@@ -91,7 +91,12 @@ PostSchema = new SimpleSchema ({
 
 Meteor.methods({
     deletePost: function(id) {
-        Posts.remove(id);
+        if (! this.userId) {
+            console.log ("Access denied");
+        }
+        else {
+            Posts.remove(id);
+        }
     }
 });
 

@@ -1,6 +1,6 @@
 Meteor.publish('posts', function(){
     if (this.userId){
-        return Posts.find(); 
+        return Posts.find({}, {sort: {createdAt: -1}}); 
     }
 });
 
@@ -17,9 +17,22 @@ ServiceConfiguration.configurations.upsert(
   { service: "Facebook" },
   {
     $set: {
-      clientId: "123",
+      clientId: "652546028221182",
       loginStyle: "popup",
       secret: "123"
     }
   }
 );
+
+var geo = new GeoCoder({
+    geocoderProvider: "google",
+    httpAdapter: "https",
+    apiKey: "123"
+}); 
+
+Meteor.methods({
+	'geoReverseMe':function(lat,lng){
+		var result = geo.reverse(lat,lng);
+		return result;          //<--this will return it but you could also add to user record instead
+	}
+});

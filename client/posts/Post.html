@@ -4,7 +4,7 @@
             <div class="pic"></div>
             <div class="details">
                 <div class="name">{{author}}</div>
-                <div class="time">{{createdAt}}, {{location}}</div>
+                <div class="time">{{myCustomTemplateHelper createdAt}}, {{location}}</div>
             </div>
             <div class="clear"></div>
             {{#if editMode}}
@@ -13,7 +13,7 @@
                 <div class="content">{{desc}}</div>
             	<a href="/post/{{_id}}">View Details</a>
             {{/if}}
-            <div class="likes">{{likes}} likes - {{comments}} comments</div>
+            <div class="likes">{{likes}} likes - {{commentcount}} comments</div>
             <i class="fa fa-pencil"></i>
             <i class="fa fa-trash"></i>
         </div>

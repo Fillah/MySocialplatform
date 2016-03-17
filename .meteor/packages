@@ -45,3 +45,5 @@ audit-argument-checks
 service-configuration
 accounts-github
 momentjs:moment
+dburles:google-maps
+aldeed:geocoder

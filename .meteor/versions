@@ -8,6 +8,7 @@ accounts-ui-unstyled@1.1.8
 aldeed:autoform@5.8.1
 aldeed:collection2@2.8.0
 aldeed:collection2-core@1.0.0
+aldeed:geocoder@0.3.8
 aldeed:schema-deny@1.0.1
 aldeed:schema-index@1.0.1
 aldeed:simple-schema@1.5.3
@@ -34,6 +35,7 @@ coffeescript@1.0.11
 cosmos:browserify@0.5.1
 datariot:ganalytics@0.2.1
 dburles:collection-helpers@1.0.4
+dburles:google-maps@1.1.5
 dburles:mongo-collection-instances@0.3.4
 ddp@1.2.2
 ddp-client@1.2.1

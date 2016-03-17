@@ -11,6 +11,12 @@ Template.Post.helpers({
     }
 });
 
+Template.Post.helpers({
+  myCustomTemplateHelper: function (dateTime) {
+    return moment(dateTime).fromNow();
+  }
+});
+
 Template.Post.events({
     'click .fa-trash': function() {
         Meteor.call('deletePost', this._id);
