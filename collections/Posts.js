@@ -61,10 +61,13 @@ PostSchema = new SimpleSchema({
            type: "hidden"
        }
    },
-    location: {
-        type: String,
-        label: "Location"
-    },
+   location: {
+      type: String,
+      optional: true,
+      autoform: {
+          type: "hidden"
+      }
+  },
     desc: {
         type: String,
         label: "Desc"

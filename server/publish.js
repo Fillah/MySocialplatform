@@ -19,20 +19,22 @@ ServiceConfiguration.configurations.upsert(
     $set: {
       clientId: "652546028221182",
       loginStyle: "popup",
-      secret: "123"
+      secret: "secret here"
     }
   }
 );
 
 var geo = new GeoCoder({
-    geocoderProvider: "google",
-    httpAdapter: "https",
-    apiKey: "123"
-}); 
+        geocoderProvider: "google",
+        httpAdapter: "https",
+        apiKey: "secret here"
+    });
 
 Meteor.methods({
 	'geoReverseMe':function(lat,lng){
+              check(lat,Match.Any);    
+              check(lng,Match.Any);
 		var result = geo.reverse(lat,lng);
-		return result;          //<--this will return it but you could also add to user record instead
+		return result;         
 	}
 });

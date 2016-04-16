@@ -7,7 +7,7 @@ Template.Posts.onCreated(function() {
 
 Template.Posts.helpers({
    posts: ()=> {
-       return Posts.find({});
+       return Posts.find({}, {sort:{createdAt: -1}});
    } 
 });
 
@@ -28,3 +28,7 @@ Template.Posts.events({
     }
   }
 });
+
+Tracker.autorun(function(){
+      Meteor.subscribe('posts');
+})

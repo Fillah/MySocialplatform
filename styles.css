@@ -45,6 +45,12 @@ body {
     margin-top: 0px;
 }
 
+@media(max-width: 960px) {
+    .navbar .container .navbar-brand {
+        margin-left: 15px;
+    }
+}
+
 header {
     background: #fff;
     padding: 20px 15px 15px 15px;
@@ -199,7 +205,7 @@ h1 {
 .details .time {
     color: #9FA2A6;
     font-size: 11px;
-    background: url("https://dl.dropboxusercontent.com/u/899395/codepen/facebook-post/friend.png") no-repeat 180px -1px;
+    background: url("https://dl.dropboxusercontent.com/u/899395/codepen/facebook-post/friend.png") no-repeat 200px -1px;
 }
 
 .content {
