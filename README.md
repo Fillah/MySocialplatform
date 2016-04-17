@@ -1,0 +1,2 @@
+# MySocialplatform
+MeteorJS application
