@@ -19,7 +19,7 @@ ServiceConfiguration.configurations.upsert(
     $set: {
       clientId: "652546028221182",
       loginStyle: "popup",
-      secret: "secret here"
+      secret: "secret"
     }
   }
 );
@@ -27,7 +27,7 @@ ServiceConfiguration.configurations.upsert(
 var geo = new GeoCoder({
         geocoderProvider: "google",
         httpAdapter: "https",
-        apiKey: "secret here"
+        apiKey: "secret"
     });
 
 Meteor.methods({
